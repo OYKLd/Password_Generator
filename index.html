@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mot de Passe Sécurisé</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Générateur de Mot de Passe</h1>
+            
+            <div class="password-display">
+                <input type="text" id="passwordOutput" readonly placeholder="Votre mot de passe apparaîtra ici">
+                <button id="copyBtn" class="copy-btn" title="Copier">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="strength-indicator">
+                <div class="strength-bar">
+                    <div id="strengthBar" class="strength-fill"></div>
+                </div>
+                <span id="strengthText">Force: </span>
+            </div>
+            
+            <div class="options">
+                <div class="length-control">
+                    <label for="lengthSlider">Longueur: <span id="lengthValue">12</span></label>
+                    <input type="range" id="lengthSlider" min="4" max="32" value="12">
+                </div>
+                
+                <div class="checkboxes">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="checkmark"></span>
+                        Lettres majuscules (A-Z)
+                    </label>
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="checkmark"></span>
+                        Lettres minuscules (a-z)
+                    </label>
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="checkmark"></span>
+                        Chiffres (0-9)
+                    </label>
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="symbols">
+                        <span class="checkmark"></span>
+                        Symboles (!@#$%^&*)
+                    </label>
+                </div>
+            </div>
+            
+            <button id="generateBtn" class="generate-btn">Générer un mot de passe</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
